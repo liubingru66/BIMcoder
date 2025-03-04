@@ -1,4 +1,3 @@
-
 # BIMtoSQL Dataset
 
 ## Overview
@@ -22,6 +21,18 @@ The dataset is categorized into **three main subsets**, each targeting different
 - Questions are **more conversational and less structured**, requiring models to infer missing information.
 - Aims to test a model’s ability to handle vague or loosely defined BIM-related queries.
 
+## Fine-Tuning and Experimentation
+
+### 1. Fine-Tuning Process
+The fine-tuning experiments were conducted on the **Baidu Qianfan Large Model Platform**. The specific training parameters are detailed in the accompanying research paper. Fine-tuning was performed using **Supervised Fine-Tuning (SFT)** on the training set to adapt the model for BIM-specific SQL query generation.
+
+### 2. Experiment Validation
+Model performance was evaluated using two key metrics:
+- **Exact Match Accuracy**: Measures the percentage of queries that exactly match the standard query structure.
+- **Execution Match Accuracy**: Measures the percentage of queries that can be successfully executed on **BIMserver**, even if they differ from the standard query structure.
+
+Detailed results and analysis can be found in the research paper.
+
 ## Usage
 The dataset is intended for **fine-tuning and testing large language models** on **BIM-specific NL2SQL tasks**. Users can:
 
@@ -38,5 +49,9 @@ Due to the **large size of fine-tuned models**, they **cannot be uploaded** to G
 3. **Evaluate** the model using the precise and ambiguous question sets.
 4. **Experiment** with different pre-trained models and training techniques.
 
+
 ## Contact
 For questions, contributions, or collaboration inquiries, please reach out via GitHub Issues.
+
+
+
